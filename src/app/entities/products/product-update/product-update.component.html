@@ -1,0 +1,42 @@
+<div class="container">
+  <form class="card" enctype="multipart/form-data" role="form" name ="createForm" role="form" novalidate (ngSubmit)="add()" [formGroup]="createForm">
+    <div class="form-control">
+      <label for="title"> Titlu</label>
+      <input type="text" id="title" required name="title"  formControlName="title">
+
+    </div>
+    <div class="form-control" >
+      <label for="description"> Descriere</label>
+      <input type="text" id="description" required name="description"  formControlName="description">
+    </div>
+    <div class="form-control">
+      <label for="price"> Pret</label>
+      <input type="text" id="price" required name="price"  formControlName="price">
+    </div>
+    <div class="form-control">
+      <label for="units"> Bucati</label>
+      <input type="text" id="units" required name="units"  formControlName="units">
+
+    </div>
+    <div class="form-control" >
+      <label for="size"> Fire (Optional)</label>
+      <input type="text" id="size" required name="size" formControlName="size">
+    </div>
+    <div class="form-control">
+      <label for="isInStock"> Stoc</label>
+      <input type="checkbox" id="isInStock" name="isInStock" formControlName="isInStock">
+    </div>
+    <div class="form-control">
+      <label for="category"> Categorie</label>
+      <input type="text"  id="category" name="category" formControlName="category">
+    </div>
+    <div class="form-control">
+      <label for="image"> Imagine</label>
+      <input type="file" (click)="onFileSelect($event)" id="image" required name="image" formControlName="image">
+    </div>
+
+
+    <button type="submit" [disabled]="!createForm.valid">Adauga produs</button>
+
+  </form>
+</div>

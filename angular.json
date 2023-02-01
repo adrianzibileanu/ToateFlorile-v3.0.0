@@ -102,5 +102,7 @@
       }
     }
   },
-  "defaultProject": "toateflorile"
+  "cli": {
+    "analytics": false
+  }
 }

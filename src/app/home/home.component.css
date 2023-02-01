@@ -1,0 +1,67 @@
+header {
+  height: 50vh; /* Cover half of the screen */
+  position: relative; /* Add this line */
+
+}
+
+.header-image {
+  background-size: cover; /* Scale the image to cover the entire element */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  height: 100%; /* Cover the entire header element */
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Add a purple tint overlay */
+  position: absolute; /* Add this line */
+  top: 0; /* Add this line */
+  left: 0; /* Add this line */
+  width: 100%; /* Add this line */
+  height: 100%; /* Add this line */
+}
+
+.navbar {
+  position: absolute; /* Add this line */
+  top: 0; /* Add this line */
+  left: 0; /* Add this line */
+  width: 100%; /* Add this line */
+}
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-family: 'Open sans', sans-serif;
+
+}
+
+.product-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 50px;
+}
+
+.product-card {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.product-card img {
+  width: 100%;
+  margin-bottom: -10px;
+  z-index: 1;
+  position: relative;
+}
+
+.product-info {
+  padding: 10px;
+  background-color: #702891;
+  color: white;
+  border-radius: 15px;
+  z-index: -1;
+  position: relative;
+}
+
