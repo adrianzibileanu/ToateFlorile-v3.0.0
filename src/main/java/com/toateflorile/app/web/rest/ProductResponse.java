@@ -6,16 +6,12 @@ import com.toateflorile.app.domain.Product;
 import com.toateflorile.app.repository.ProductRepository;
 import jakarta.servlet.annotation.MultipartConfig;
 import net.minidev.json.JSONObject;
-import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.gridfs.GridFsTemplate;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.Path;
 import java.util.List;
 
 @MultipartConfig
@@ -34,12 +30,7 @@ public class ProductResponse {
     this.objectMapper = objectMapper;
   }
 
-  @PostMapping("/uploads")
-  public void handleFileUpload(@RequestParam("image") MultipartFile file) throws IOException {
-    ObjectId fileId = gridFsTemplate.store(file.getInputStream(), file.getOriginalFilename());
-    System.out.println("File uploaded succesfully: "+file);
-  }
-
+  //GET IMAGE
   @GetMapping("/products/images/{productId}")
   public ResponseEntity<byte[]> getProductImage(@PathVariable String productId){
     //get the product from the product repository
@@ -56,10 +47,8 @@ public class ProductResponse {
       Gson g = new Gson();
       JSONObject json = g.fromJson(productJson, JSONObject.class);
       json.put("image", file.getOriginalFilename());
-      json.put("imagePath", file.getOriginalFilename());
       productJson = json.toString();
       product = objectMapper.readValue(productJson, Product.class);
-      //Product product = objectMapper.readValue(productJson, Product.class);
       if (file != null) {
         System.out.println("File found"+file);
         byte[] byteArr = file.getBytes();

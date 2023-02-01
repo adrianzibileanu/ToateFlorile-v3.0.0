@@ -31,16 +31,6 @@ export class ProductUpdateComponent implements OnInit {
   ngOnInit() {
   }
 
-  uploadFile(image: File) {
-    const formData = new FormData();
-    formData.append('image', image);
-    console.log(image +"from UploadFile");
-    console.log(formData.get('image'));
-
-    return this.http.post('http://localhost:8080/api/uploads', formData, { responseType: 'blob' }).toPromise().then(res => res);
-  }
-
-
   products: Product[] = [];
   newProduct: any;
 
@@ -97,7 +87,6 @@ export class ProductUpdateComponent implements OnInit {
     console.log(event.target.files);
     this.selectedFile = event.target.files[0];
     if(this.selectedFile) {
-      this.uploadFile(this.selectedFile);
       console.log("Success!")
       console.log(this.selectedFile);
     }else{

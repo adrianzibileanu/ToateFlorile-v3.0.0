@@ -33,11 +33,6 @@ export class ProductService {
   addProduct(product: Product, image: File): Observable<EntityResponseType>{
       const formData = new FormData();
       formData.append('product', JSON.stringify(product));
-      /*formData.append('image', image);
-      console.log(image + "From addProduct");
-
-      return this.http.post<Product>(this.baseUrl, formData, { observe: 'response'});*/
-
       const reader = new FileReader();
 
       formData.append('image', new Blob([image], { type: image.type }));

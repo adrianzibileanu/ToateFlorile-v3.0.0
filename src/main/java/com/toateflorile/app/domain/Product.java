@@ -25,17 +25,6 @@ public class Product {
   @NotNull
   private byte[] image;
 
-  public String getImagePath() {
-    return imagePath;
-  }
-
-  public void setImagePath(String imagePath) {
-    this.imagePath = imagePath;
-  }
-
-  @NotNull
-  private String imagePath;
-
   @NotNull
   private int price;
 
@@ -50,7 +39,7 @@ public class Product {
 
   private int size;
 
-  public Product(String id, String title, String description, @NotNull byte[] image, int price, int units, String category, boolean isInStock, int size, String imagePath) {
+  public Product(String id, String title, String description, @NotNull byte[] image, int price, int units, String category, boolean isInStock, int size) {
     this.id = id;
     this.title = title;
     this.description = description;
@@ -60,6 +49,5 @@ public class Product {
     this.category = category;
     this.isInStock = isInStock;
     this.size = size;
-    this.imagePath = imagePath;
   }
 }

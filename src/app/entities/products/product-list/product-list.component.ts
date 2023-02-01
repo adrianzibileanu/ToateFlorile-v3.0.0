@@ -27,7 +27,6 @@ export class ProductListComponent implements OnInit {
         this.image = URL.createObjectURL(image);
       });
     });
-    console.log(this.image);
     this.listPatients();
   }
 
