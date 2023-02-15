@@ -13,6 +13,10 @@ import {ContactComponent} from './entities/contact/contact.component';
 import { AdminComponent } from './admin/admin.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FileUploadModule} from "ng2-file-upload";
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { ProfileComponent } from './auth/profile/profile.component';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +28,9 @@ import {FileUploadModule} from "ng2-file-upload";
     ServicesComponent,
     ContactComponent,
     AdminComponent,
+    LoginComponent,
+    RegisterComponent,
+    ProfileComponent
   ],
     imports: [
         BrowserModule,
@@ -36,5 +43,11 @@ import {FileUploadModule} from "ng2-file-upload";
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
+
 export class AppModule {
+
+
+
 }

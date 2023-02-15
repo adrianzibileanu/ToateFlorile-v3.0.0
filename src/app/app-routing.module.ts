@@ -8,6 +8,9 @@ import {ContactComponent} from "./entities/contact/contact.component";
 import {ServicesComponent} from "./entities/services/services.component";
 import {ProductUpdateComponent} from "./entities/products/product-update/product-update.component";
 import {AdminComponent} from "./admin/admin.component";
+import {LoginComponent} from "./auth/login/login.component";
+import {RegisterComponent} from "./auth/register/register.component";
+import {ProfileComponent} from "./auth/profile/profile.component";
 
 const routes: Routes = [
 
@@ -17,7 +20,10 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'services', component: ServicesComponent},
   {path: 'products/create', component: ProductUpdateComponent},
-  {path: 'admin', component: AdminComponent}
+  {path: 'admin', component: AdminComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
+  {path: 'profile', component: ProfileComponent}
 
 ];
 
