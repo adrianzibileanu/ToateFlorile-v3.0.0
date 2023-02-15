@@ -17,7 +17,7 @@ import java.util.List;
 @MultipartConfig
 @RestController
 @RequestMapping("/api")
-@CrossOrigin("*")
+@CrossOrigin("http://localhost:4200")
 public class ProductResponse {
 
   private final ProductRepository productRepository;
