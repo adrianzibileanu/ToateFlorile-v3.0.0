@@ -33,6 +33,9 @@ export class AppComponent {
     }
   }
   ngOnInit(){
+    //Cookies - START
+    //TODO: move this into a separate function and just call it here
+    //TODO: add a data privacy page
     let cc = window as any;
     cc.cookieconsent.initialise({
       palette: {
@@ -52,20 +55,22 @@ export class AppComponent {
         href: environment.production + "/dataprivacy"
       }
     });
+    //COOKIES - END
 
+    /*Role access - START
+    This function gets the username and uses it to recover the user role.
+    */
     if(this.tokenService.getUserName()) {
-
       const username = this.tokenService.getUserName();
       if(username) {
         this.userService.getUser(JSON.parse(username).username).subscribe(user => {
           this.user = user;
           if (this.user && this.user.roles)
             this.userRole = this.user.roles[0].name;
-
         });
       }
-
     }
+    //Role access - END
 
 
 
