@@ -16,6 +16,7 @@ import {FileUploadModule} from "ng2-file-upload";
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { ProfileComponent } from './auth/profile/profile.component';
+import { UserComponent } from './entities/user/user.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ProfileComponent } from './auth/profile/profile.component';
     AdminComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    UserComponent
   ],
     imports: [
         BrowserModule,

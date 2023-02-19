@@ -1,14 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {User} from "../entities/user/user";
+import {TokenStorageService} from "./token-storage.service";
 
-const API_URL = 'http://localhost:8080/api/users/';
+const API_URL = 'http://localhost:8080/api/users';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  constructor(private http: HttpClient) { }
+
+  roles?: any;
+  user?: User;
+  constructor(private http: HttpClient, private tokenStorage: TokenStorageService) { }
 
   getPublicContent(): Observable<any> {
     return this.http.get(API_URL + 'all', { responseType: 'text' });
@@ -25,4 +30,9 @@ export class UserService {
   getAdminBoard(): Observable<any> {
     return this.http.get(API_URL + 'admin', { responseType: 'text' });
   }
+
+  getUser(username: string | null): Observable<User>{
+    return this.http.get<User>(API_URL+"/"+username);
+  }
+
 }

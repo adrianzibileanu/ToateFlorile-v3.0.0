@@ -69,6 +69,17 @@ public class JwtUtils {
     return false;
   }
 
+   public boolean invalidateToken(String token){
+      Claims claims = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody();
+      Date expirationDate = claims.getExpiration();
+      return new Date().after(expirationDate);
+   }
+
+   public String parseJwt(String token){
+      Claims claims = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody();
+      return claims.getSubject();
+   }
+
   public String generateTokenFromUsername(String username) {
     return Jwts.builder()
       .setSubject(username)

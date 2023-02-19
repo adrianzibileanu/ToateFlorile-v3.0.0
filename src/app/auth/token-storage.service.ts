@@ -22,6 +22,10 @@ export class TokenStorageService {
     return window.sessionStorage.getItem(TOKEN_KEY);
   }
 
+  public getUserName(): string | null {
+    return window.sessionStorage.getItem(USER_KEY);
+  }
+
   public saveUser(user: any): void {
     window.sessionStorage.removeItem(USER_KEY);
     window.sessionStorage.setItem(USER_KEY, JSON.stringify(user));
@@ -35,4 +39,8 @@ export class TokenStorageService {
 
     return {};
   }
+
+  public isAuthenticated(): boolean {
+    return (this.getUser() != null && this.getToken() != null);
+      }
 }

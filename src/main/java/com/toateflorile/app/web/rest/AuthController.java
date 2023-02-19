@@ -32,6 +32,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -73,6 +75,13 @@ public class AuthController {
         userDetails.getUsername(),
         userDetails.getEmail(),
         roles));
+  }
+
+  @PostMapping("/logout")
+  public ResponseEntity<?> logout(HttpServletRequest request) {
+    String token = jwtUtils.getJwtFromCookies(request);
+    jwtUtils.invalidateToken(token);
+    return ResponseEntity.ok(new MessageResponse("Logout successful"));
   }
 
   @PostMapping("/signup")

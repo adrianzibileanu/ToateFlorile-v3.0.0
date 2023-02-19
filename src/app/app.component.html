@@ -1,13 +1,16 @@
 <div class="navbar" [ngClass]="{ 'sticky': isSticky }">
   <h2><a routerLink="/">{{title}}</a></h2>
   <div class="nav-links">
-    <li><a routerLink="/admin">Admin</a></li>
+    <li *ngIf="userRole == 'ROLE_ADMINOFALLPLANTSANDFLOWERS'"><a routerLink="/admin">Admin</a></li>
     <li><a routerLink="/products">Produse</a></li>
     <li><a routerLink="/services">Servicii</a></li>
     <li><a routerLink="/contact">Contact</a></li>
-    <li><a routerLink="/login">Login</a></li>
-    <li><a routerLink="/register">Register</a></li>
+    <li *ngIf="isAuthenticated == false"><a routerLink="/login">Conecteaza-te</a></li>
+    <li *ngIf="isAuthenticated == false"><a routerLink="/register">Creaza cont</a></li>
+    <button *ngIf="isAuthenticated == true" (click)="logout()">Logout</button>
+
   </div>
 </div>
+
 <router-outlet></router-outlet>
 
