@@ -1,6 +1,6 @@
 <div class="product-detail">
   <div class="product-img">
-    <img [src]="'http://localhost:8080/api/products/images/' + product?.id" alt="product1">
+    <img [src]="'http://localhost:8080/api/products/images/' + product?.id" alt="{{product?.title}}">
   </div>
   <div class="product-info">
     <h2>{{ product?.title }}</h2>

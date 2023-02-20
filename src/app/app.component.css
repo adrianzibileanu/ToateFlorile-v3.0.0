@@ -9,23 +9,34 @@
   background-color: transparent;
   font-family: 'Open sans', sans-serif;
   font-size: 1.2em;
-
-
+  margin-top: -10px;
 }
 
 .navbar h2 a {
-  color: black; /* Add this line */
+  color: white; /* Add this line */
+  text-decoration: none; /* Add this line */
+}
+
+.navbar h2 a:hover {
+  color: lightpink; /* Add this line */
+  text-decoration: none; /* Add this line */
+}
+
+.sticky h2 a:hover {
+  color: #764C77; /* Add this line */
   text-decoration: none; /* Add this line */
 }
 
 .sticky {
-  position: relative;
+  background-color: white;
+  position: sticky;
   top: 0;
+  filter: drop-shadow(0 0 0.75rem rgba(139, 0, 139, 0.29));
+  /*z-index: 1;*/
 }
 
-/* Site Logo */
-.navbar .logo {
-  margin-left: 20px;
+.sticky h2 a{
+  color: black;
 }
 
 /* Navigation Links */
@@ -37,18 +48,65 @@
 }
 
 .navbar .nav-links a {
+  color: white; /* Add this line */
+  text-decoration: none; /* Add this line */
+  margin: 0 10px;
+}
+
+.sticky .nav-links a {
   color: black; /* Add this line */
   text-decoration: none; /* Add this line */
   margin: 0 10px;
 }
 
+
 .navbar .nav-links a:hover{
-  color: purple;
+  color: lightpink;
+}
+
+.sticky .nav-links a:hover{
+  color: #764C77 !important;
 }
 
 .navbar .nav-links li {
   margin: 0 2px;
 }
+
+/*secondary Navbar*/
+
+.secondary{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.2em;
+  filter: drop-shadow(0 0 0.75rem rgba(139, 0, 139, 0.29));
+}
+
+.secondary .nav-links a {
+  color: black; /* Add this line */
+  text-decoration: none; /* Add this line */
+  margin: 0 10px;
+}
+
+.secondary .nav-links a:hover {
+  color: #764C77 ; /* Add this line */
+  text-decoration: none; /* Add this line */
+  margin: 0 10px;
+}
+
+.secondary h2 a{
+  color: black;
+}
+
+.secondary h2 a:hover{
+  color: #764C77 ;
+}
+
 
 /* Responsive Navigation */
 @media (max-width: 768px) {
@@ -61,3 +119,4 @@
     margin: 10px 0;
   }
 }
+

@@ -1,16 +1,14 @@
 <div class="product-card-container">
   <div *ngFor="let product of products" class="product-card">
 
-    <img [src]="'http://localhost:8080/api/products/images/' + product.id" alt="product1">
+    <a routerLink="/products/{{product.id}}"><img [src]="'http://localhost:8080/api/products/images/' + product.id" alt="product1"></a>
 
 
-    <div class="product-info">
+    <a routerLink="/products/{{product.id}}"><div class="product-info">
       <h3>{{product.title}}</h3>
-      <h3>{{product.price}}</h3>
-      <h6>{{product.isInStock}}</h6>
-      <p>{{product.description}}</p>
-    </div>
-    <a routerLink="/products/{{product.id}}">View Product</a>
+      <h2>{{product.price}}</h2>
+    </div></a>
+
 
   </div>
 </div>
