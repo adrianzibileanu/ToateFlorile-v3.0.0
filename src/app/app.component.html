@@ -1,4 +1,4 @@
-<div class="navbar" [ngClass]="{ 'sticky': isSticky }">
+<div class="navbar" [ngClass]="{ 'sticky': isSticky, 'secondary' : secondary }">
   <h2><a routerLink="/">{{title}}</a></h2>
   <div class="nav-links">
     <li *ngIf="userRole == 'ROLE_ADMINOFALLPLANTSANDFLOWERS'"><a routerLink="/admin">Admin</a></li>

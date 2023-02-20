@@ -27,14 +27,18 @@ export class ProductListComponent implements OnInit {
         this.image = URL.createObjectURL(image);
       });
     });
-    this.listPatients();
+    this.listProducts();
   }
 
-  listPatients(): void{
+  listProducts(): void{
     this.productService.getProducts().subscribe(products => this.products = products);
   }
 
   delete(id: string): void{
     this.productService.deleteProduct(id).subscribe(() => window.location.reload());
+  }
+
+  toProduct(id?: string): void{
+    this.location.go("/products/"+id);
   }
 }
