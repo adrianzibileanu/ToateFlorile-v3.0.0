@@ -71,7 +71,10 @@ export class AppComponent {
   logout(){
     this.tokenService.signOut();
     this.userRole = "";
+    if(location.pathname != "/admin")
     window.location.reload();
+    else
+      window.location.replace("http://localhost:4200");
   }
 
   constructor(private tokenService: TokenStorageService, private userService: UserService, private cookiesService: CookiesService, private router: Router){
