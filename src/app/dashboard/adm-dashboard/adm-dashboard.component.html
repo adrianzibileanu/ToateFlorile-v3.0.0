@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="sidebar">
+    <ul>
+      <li><button (click)="updateProduct()">Adauga produs</button></li>
+      <li><button>Profil</button></li>
+      <li><button>Mesaje</button></li>
+      <li><button>Comenzi</button></li>
+      <li><button>Produse</button></li>
+      <li><button>Setari</button></li>
+    </ul>
+  </div>
+  <div class="content">
+
+    <h1> Panou de administrare</h1>
+    <div *ngIf="currentPath == 'productUpdate'">
+      <app-product-update></app-product-update>
+    </div>
+    <div *ngIf="currentPath == 'profile'">
+
+    </div>
+
+
+  </div>
+</div>
+
+

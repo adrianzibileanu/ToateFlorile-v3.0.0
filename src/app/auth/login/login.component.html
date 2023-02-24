@@ -67,10 +67,14 @@
           Login failed: {{ errorMessage }}
         </div>
       </div>
+
+        <a routerLink="/register">Nu ai cont? Creaza unul!</a>
+
     </form>
 
     <div class="alert alert-success" *ngIf="isLoggedIn">
       Logged in as {{ roles }}.
     </div>
   </div>
+
 </div>

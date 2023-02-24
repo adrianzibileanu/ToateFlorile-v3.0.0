@@ -1,7 +1,4 @@
-import {Component, HostListener} from '@angular/core';
-import {Subscription} from "rxjs";
-import {environment} from "../environments/environment";
-import {AuthService} from "./auth/auth.service";
+import {Component, HostListener, ViewChild} from '@angular/core';
 import {TokenStorageService} from "./auth/token-storage.service";
 import {UserService} from "./auth/user.service";
 import {User} from "./entities/user/user";
@@ -67,6 +64,7 @@ export class AppComponent {
 
 
   }
+
 
   logout(){
     this.tokenService.signOut();

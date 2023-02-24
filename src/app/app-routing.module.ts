@@ -12,6 +12,7 @@ import {LoginComponent} from "./auth/login/login.component";
 import {RegisterComponent} from "./auth/register/register.component";
 import {ProfileComponent} from "./auth/profile/profile.component";
 import {AuthGuardService} from "./auth/auth-guard.service";
+import {AdmDashboardComponent} from "./dashboard/adm-dashboard/adm-dashboard.component";
 
 const routes: Routes = [
 
@@ -24,7 +25,9 @@ const routes: Routes = [
   {path: 'admin', component: AdminComponent, canActivate: [AuthGuardService]},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'profile', component: ProfileComponent}
+  {path: 'profile', component: ProfileComponent},
+  {path: 'admDashboard', component: AdmDashboardComponent},
+  {path: 'productUpdate', component: ProductUpdateComponent}
 
 ];
 

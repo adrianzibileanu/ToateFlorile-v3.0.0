@@ -1,25 +1,18 @@
 <div class="container" *ngIf="currentUser; else loggedOut">
   <header class="jumbotron">
-    <h3>
-      <strong>{{ currentUser.username }}</strong> Profile
-    </h3>
+    <h2>
+      Bine ai venit, <strong>{{ currentUser.username }}</strong>!
+    </h2>
   </header>
-  <p>
-    <strong>Token:</strong>
-    {{ currentUser.accessToken.substring(0, 20) }} ...
-    {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}
-  </p>
+
   <p>
     <strong>Email:</strong>
     {{ currentUser.email }}
   </p>
-  <strong>Roles:</strong>
-  <ul>
-    <li *ngFor="let role of currentUser.roles">
-      {{ role }}
-    </li>
-  </ul>
+
 </div>
+
+<button *ngIf="isAuthenticated == true" (click)="logout()">Logout</button>
 
 <ng-template #loggedOut>
   Please login.

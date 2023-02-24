@@ -74,19 +74,6 @@
 
 /*secondary Navbar*/
 
-.secondary{
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: white;
-  font-family: 'Open sans', sans-serif;
-  font-size: 1.2em;
-  filter: drop-shadow(0 0 0.75rem rgba(139, 0, 139, 0.29));
-}
-
 .secondary .nav-links a {
   color: black; /* Add this line */
   text-decoration: none; /* Add this line */
@@ -107,6 +94,41 @@
   color: #764C77 ;
 }
 
+
+.secondary {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.2em;
+  filter: drop-shadow(0 0 0.75rem rgba(139, 0, 139, 0.29));
+}
+
+.secondary.sticky {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  filter: drop-shadow(0 0 0.75rem rgba(139, 0, 139, 0.29));
+  /*z-index: 1;*/
+}
+
+button{
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-family: 'Open sans', sans-serif;
+  font-size: 0.82em;
+  padding: 0px;
+  margin: 0px;
+}
+
+button:hover{
+  color: lightpink;
+}
 
 /* Responsive Navigation */
 @media (max-width: 768px) {

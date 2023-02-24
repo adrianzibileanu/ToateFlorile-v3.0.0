@@ -3,11 +3,9 @@
   <div class="nav-links">
     <li *ngIf="userRole == 'ROLE_ADMINOFALLPLANTSANDFLOWERS'"><a routerLink="/admin">Admin</a></li>
     <li><a routerLink="/products">Produse</a></li>
-    <li><a routerLink="/services">Servicii</a></li>
     <li><a routerLink="/contact">Contact</a></li>
-    <li *ngIf="isAuthenticated == false"><a routerLink="/login">Conecteaza-te</a></li>
-    <li *ngIf="isAuthenticated == false"><a routerLink="/register">Creaza cont</a></li>
-    <button *ngIf="isAuthenticated == true" (click)="logout()">Logout</button>
+    <li *ngIf="isAuthenticated == false"><a routerLink="/login">Contul meu</a></li>
+    <li *ngIf="isAuthenticated == true"><a routerLink="/profile">Profil</a></li>
 
   </div>
 </div>

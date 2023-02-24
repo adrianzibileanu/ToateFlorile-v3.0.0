@@ -18,6 +18,8 @@ import { RegisterComponent } from './auth/register/register.component';
 import { ProfileComponent } from './auth/profile/profile.component';
 import { UserComponent } from './entities/user/user.component';
 import {AuthGuardService} from "./auth/auth-guard.service";
+import { AdmDashboardComponent } from './dashboard/adm-dashboard/adm-dashboard.component';
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import {AuthGuardService} from "./auth/auth-guard.service";
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    UserComponent
+    UserComponent,
+    AdmDashboardComponent,
+    DashboardComponent
   ],
     imports: [
         BrowserModule,
