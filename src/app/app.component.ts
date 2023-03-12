@@ -18,6 +18,7 @@ export class AppComponent {
   isAuthenticated = this.tokenService.isAuthenticated();
   userRole?: any;
   user?: User;
+  notSticky = this.isSticky == false && this.secondary == false;
 
   @HostListener("window:scroll", [])
   onWindowScroll() {

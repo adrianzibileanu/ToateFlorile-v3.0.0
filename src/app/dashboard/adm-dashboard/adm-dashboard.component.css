@@ -2,34 +2,36 @@
   box-sizing: border-box;
 }
 
-.container {
+.container-custom {
   display: flex;
   height: 100vh;
 }
 
-.sidebar {
+.sidebar-custom {
   background-color: rgba(96, 38, 96, 0.84);
   color: #fff;
   flex: 0 0 200px;
   padding: 20px;
+  height: 200%;
+  max-height: 200%;
 }
 
-.sidebar ul {
+.sidebar-custom ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.sidebar li {
+.sidebar-custom li {
   margin-bottom: 10px;
 }
 
-.sidebar a {
+.sidebar-custom a {
   color: #fff;
   text-decoration: none;
 }
 
-.content {
+.content-custom {
   flex: 1;
   padding: 20px;
 }

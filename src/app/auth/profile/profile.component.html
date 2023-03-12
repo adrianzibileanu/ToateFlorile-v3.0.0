@@ -1,8 +1,9 @@
-<div class="container" *ngIf="currentUser; else loggedOut">
-  <header class="jumbotron">
+<div class="container w-100" *ngIf="currentUser; else loggedOut">
+  <header class="jumbotron bg-dark text-white w-100">
     <h2>
       Bine ai venit, <strong>{{ currentUser.username }}</strong>!
     </h2>
+    <button class="float-end btn-light rounded p-2 border-0 shadow" *ngIf="isAuthenticated == true" (click)="logout()">Logout</button>
   </header>
 
   <p>
@@ -10,9 +11,10 @@
     {{ currentUser.email }}
   </p>
 
+
 </div>
 
-<button *ngIf="isAuthenticated == true" (click)="logout()">Logout</button>
+
 
 <ng-template #loggedOut>
   Please login.

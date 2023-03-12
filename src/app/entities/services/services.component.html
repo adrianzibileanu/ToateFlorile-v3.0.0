@@ -1,1 +1,43 @@
-<p>services works!</p>
+<ngb-carousel class="slider-container" *ngIf="images">
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[0]" alt="Random first slide" />
+      <div class="slider-overlay-custom"></div>
+      <div class="carousel-caption custom-text">
+        <h1>{{title[0]}}</h1>
+        <h4>{{description[0]}}</h4>
+      </div>
+    </div>
+
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[1]" alt="Random second slide" />
+      <div class="slider-overlay-custom"></div>
+      <div class="carousel-caption custom-text">
+        <h1>{{title[1]}}</h1>
+        <h4>{{description[1]}}</h4>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[2]" alt="Random third slide" />
+      <div class="slider-overlay-custom"></div>
+      <div class="carousel-caption custom-text">
+        <h1>{{title[2]}}</h1>
+        <h4>{{description[2]}}</h4>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[3]" alt="Random third slide" />
+      <div class="slider-overlay-custom"></div>
+      <div class="carousel-caption custom-text">
+        <h1>{{title[3]}}</h1>
+        <h4>{{description[3]}}</h4>
+      </div>
+    </div>
+  </ng-template>
+</ngb-carousel>

@@ -1,5 +1,5 @@
-<div class="container">
-  <div class="sidebar">
+<div class="container-custom">
+  <div class="sidebar-custom">
     <ul>
       <li><button (click)="updateProduct()">Adauga produs</button></li>
       <li><button>Profil</button></li>
@@ -9,9 +9,9 @@
       <li><button>Setari</button></li>
     </ul>
   </div>
-  <div class="content">
+  <div class="container-custom">
 
-    <h1> Panou de administrare</h1>
+    <h1 class="text-center mt-3"> Panou de administrare</h1>
     <div *ngIf="currentPath == 'productUpdate'">
       <app-product-update></app-product-update>
     </div>

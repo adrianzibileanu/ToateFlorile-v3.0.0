@@ -1,0 +1,10 @@
+.slider-container img{
+  height: 300px;
+  border-radius: 15px;
+}
+
+ngb-carousel{
+  margin-top: 250px;
+  height: 20%;
+  width: 100%;
+}

@@ -3,16 +3,15 @@ header {
   width: 100%;
   position: relative; /* Add this line */
   margin-top: -110px;
-
 }
 
-.header-image {
+.header-image-custom {
   background-size: cover; /* Scale the image to cover the entire element */
   background-repeat: no-repeat; /* Do not repeat the image */
   height: 100%; /* Cover the entire header element */
 }
 
-.overlay {
+.overlay-custom {
   background-color: rgba(0, 0, 0, 0.5); /* Add a purple tint overlay */
   position: absolute; /* Add this line */
   top: 0; /* Add this line */
@@ -21,7 +20,7 @@ header {
   height: 100%; /* Add this line */
 }
 
-.header-text {
+.header-text-custom {
   position: absolute;
   top: 55%;
   left: 50%;
@@ -29,5 +28,17 @@ header {
   text-align: center;
   color: white;
   font-family: 'Open sans', sans-serif;
+  font-size: 1em;
+  width: 50%;
+  height: 35%;
 
+}
+
+
+.container-custom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin-top: 40px;
 }

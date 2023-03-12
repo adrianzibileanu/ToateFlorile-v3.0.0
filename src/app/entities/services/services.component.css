@@ -1,0 +1,31 @@
+.slider-container img{
+  height: 500px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+ngb-carousel{
+  margin-top: -40px;
+  width: 1200px;
+}
+
+.slider-overlay-custom {
+  background-color: rgba(49, 17, 49, 0.78); /* Add a purple tint overlay */
+  position: absolute; /* Add this line */
+  top: 0; /* Add this line */
+  left: 0; /* Add this line */
+  width: 100%; /* Add this line */
+  height: 100%; /* Add this line */
+  border-radius: 15px;
+}
+
+.custom-text{
+  top: 130px;
+}
+
+.custom-text h1{
+  font-size: 3em;
+}
+
+
+

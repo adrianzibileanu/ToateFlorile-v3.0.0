@@ -1,5 +1,14 @@
-<div class="navbar" [ngClass]="{ 'sticky': isSticky, 'secondary' : secondary }">
-  <h2><a routerLink="/">{{title}}</a></h2>
+<div class="navbar-custom" [ngClass]="{ 'sticky': isSticky, 'secondary' : secondary }">
+    <div *ngIf="isSticky || secondary; else notSticky;">
+    <h2><a routerLink="/"><img class="logo" src="assets/images/tf logo2.png"></a></h2>
+    </div>
+  <ng-template #notSticky>
+    <h2><a routerLink="/"><img class="logo" src="assets/images/tf logo2w.png"></a></h2>
+  </ng-template>
+
+
+
+
   <div class="nav-links">
     <li *ngIf="userRole == 'ROLE_ADMINOFALLPLANTSANDFLOWERS'"><a routerLink="/admin">Admin</a></li>
     <li><a routerLink="/products">Produse</a></li>
@@ -12,3 +21,13 @@
 
 <router-outlet></router-outlet>
 
+<footer>
+  <div class="grid">
+    <div class="float-start">
+  <h2><a routerLink="/"><img class="logo" src="assets/images/tf logo2w.png"></a></h2>
+    </div>
+    <div class="col-2">
+  <a class="text-decoration-none ml-4" href="tel:0745412305">0745412305</a>
+    </div>
+  </div>
+</footer>

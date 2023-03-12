@@ -1,6 +1,10 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { NgbCarousel } from "@ng-bootstrap/ng-bootstrap";
+import {NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
+import {NgIf} from "@angular/common";
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -20,6 +24,9 @@ import { UserComponent } from './entities/user/user.component';
 import {AuthGuardService} from "./auth/auth-guard.service";
 import { AdmDashboardComponent } from './dashboard/adm-dashboard/adm-dashboard.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
+import { ReviewsComponent } from './entities/reviews/reviews.component';
+import { ShopDashboardComponent } from './e-shop/shop-dashboard/shop-dashboard.component';
+import { EshopProductListComponent } from './e-shop/eshop-product-list/eshop-product-list.component';
 
 
 @NgModule({
@@ -37,7 +44,10 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
     ProfileComponent,
     UserComponent,
     AdmDashboardComponent,
-    DashboardComponent
+    DashboardComponent,
+    ReviewsComponent,
+    ShopDashboardComponent,
+    EshopProductListComponent
   ],
     imports: [
         BrowserModule,
@@ -45,7 +55,11 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
         ReactiveFormsModule,
         HttpClientModule,
         FormsModule,
-        FileUploadModule
+        FileUploadModule,
+        NgbModule,
+        NgbCarousel,
+        NgbCarouselModule,
+        NgIf
     ],
   providers: [AuthGuardService],
   bootstrap: [AppComponent]
